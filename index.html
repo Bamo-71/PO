@@ -1,178 +1,248 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bamory Sakanoko - Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: white;
-    }
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background: #1e293b;
-    }
-    h2 { color: #38bdf8; }
-    section {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      transition: 0.3s;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .skill-box {
-      text-align: center;
-      transition: 0.3s;
-    }
-    .skill-box:hover {
-      transform: translateY(-5px);
-    }
-    button {
-      padding: 10px 15px;
-      background: #38bdf8;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    .hidden { display: none; }
-    img { border-radius: 5px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bamory Sakanoko - Portfolio</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 40px;
+  background: #1e293b;
+}
+
+h2 { color: #38bdf8; }
+
+section {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* CARD */
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.card:hover { transform: scale(1.03); }
+
+/* ABOUT */
+.about {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.about img {
+  width: 120px;
+  border-radius: 10px;
+}
+
+/* SKILLS */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* CERTIFICATS */
+.certs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.certs img {
+  width: 100%;
+}
+
+/* BUTTON */
+button {
+  padding: 10px;
+  background: #38bdf8;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden { display: none; }
+
+</style>
 </head>
+
 <body>
 
 <header>
   <h1>Bamory Sakanoko</h1>
-  <p>Data Analyst | Étudiant en Statistique & Économie Appliquée</p>
+  <p>Data Analyst | Statistique & Économie Appliquée</p>
 </header>
 
 <section>
-  <h2>À propos</h2>
-  <div class="card">
-    <p>
-      Étudiant en fin de cycle de Licence en Statistique et Économie appliquée, je dispose d’une bonne maîtrise des outils d’analyse de données. Je suis capable de collecter, stocker, traiter et interpréter des données brutes afin d’en extraire des informations pertinentes pour la prise de décision, tout en respectant les méthodologies et les bonnes pratiques d’analyse.
-    </p>
-  </div>
-</section>
+<h2>À propos</h2>
 
-<section>
-  <h2>Compétences</h2>
-  <div class="card skills">
-
-```
-<div class="skill-box">
-  <img src="https://www.r-project.org/logo/Rlogo.png" width="50"><br>
-  <small>R.png</small>
+<div class="card about">
+  <img src="photo.png"> <!-- TA PHOTO -->
+  <p>
+    Étudiant en fin de cycle Licence en Statistique et Économie appliquée.
+    Spécialisé en analyse de données, modélisation économétrique et prise de décision.
+  </p>
 </div>
-
-<div class="skill-box">
-  <img src="stata.png" width="50"><br>
-  <small>STATA</small>
-</div>
-
-<div class="skill-box">
-  <img src="Microsoft_Excel.png" width="50"><br>
-  <small>Excel</small>
-</div>
-
-<div class="skill-box">
-  <img src="MySQL.png" width="50"><br>
-  <small>SQL</small>
-</div>
-
-<div class="skill-box">
-  <img src="Power_Bi.png" width="50"><br>
-  <small>Power_BI</small>
-</div>
-
-<div class="skill-box">
-  <img src="python.png" width="50"><br>
-  <small>Python</small>
-</div>
-
-<div class="skill-box">
-  <img src="Pandas.png" width="50"><br>
-  <small>Pandas</small>
-</div>
-
-<div class="skill-box">
-  <img src="numpy.png" width="50"><br>
-  <small>Numpy.png</small>
-</div>
-
-<div class="skill-box">
-  <img src="Matplotlib.png" width="50"><br>
-  <small>Matplotlib</small>
-</div>
-```
-
-  </div>
-</section>
-
-<section>
-  <h2>Projets</h2>
-
-  <div class="card">
-    <h3>Modèle Mprobit - TravelMode</h3>
-    <button onclick="toggle('proj1')">Voir détails</button>
-    <div id="proj1" class="hidden">
-      <p>Analyse avec effets marginaux</p>
-      <a href="#">Voir code R</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>Modèle Logit / Probit</h3>
-    <button onclick="toggle('proj2')">Voir détails</button>
-    <div id="proj2" class="hidden">
-      <p>Analyse des probabilités</p>
-      <a href="#">Voir code</a>
-    </div>
-  </div>
 
 </section>
 
 <section>
-  <h2>Certificats</h2>
+<h2>Compétences</h2>
 
-  <div class="card">
-    <button onclick="toggle('cert1')">Voir certificat</button>
+<div class="card skills">
 
-```
-<div id="cert1" class="hidden">
-  <p>Certificat Data Analysis</p>
-  <img src="certificat1.png" width="100%"><br>
-  <a href="#" target="_blank">Voir en ligne</a>
+<div class="skill-box">
+<img src="R.png" width="50"><br>R
 </div>
-```
 
-  </div>
+<div class="skill-box">
+<img src="stata.png" width="50"><br>STATA
+</div>
 
+<div class="skill-box">
+<img src="Microsoft_Excel.png" width="50"><br>Excel
+</div>
+
+<div class="skill-box">
+<img src="MySQL.png" width="50"><br>MySQL
+</div>
+
+<div class="skill-box">
+<img src="Power_BI.png" width="50"><br>Power BI
+</div>
+
+<div class="skill-box">
+<img src="Pandas.png" width="50"><br>Pandas
+</div>
+
+<div class="skill-box">
+<img src="numpy.png" width="50"><br>Numpy
+</div>
+
+<div class="skill-box">
+<img src="Matplotlib.png" width="50"><br>Matplotlib
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Projets</h2>
+
+<div class="projects">
+
+<div class="card project">
+<img src="proj1.png">
+<h3>Mprobit - TravelMode</h3>
+<button onclick="toggle('p1')">Voir</button>
+<div id="p1" class="hidden">
+<p>Effets marginaux</p>
+<a href="#">Voir code</a>
+</div>
+</div>
+
+<div class="card project">
+<img src="proj2.png">
+<h3>Logit / Probit</h3>
+<button onclick="toggle('p2')">Voir</button>
+<div id="p2" class="hidden">
+<p>Analyse probabilités</p>
+</div>
+</div>
+
+<div class="card project">
+<img src="proj3.png">
+<h3>Analyse Excel</h3>
+<button onclick="toggle('p3')">Voir</button>
+<div id="p3" class="hidden">
+<p>Dashboard Excel</p>
+</div>
+</div>
+
+<div class="card project">
+<img src="proj4.png">
+<h3>Projet SQL</h3>
+<button onclick="toggle('p4')">Voir</button>
+<div id="p4" class="hidden">
+<p>Base de données</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Certificats</h2>
+
+<div class="certs">
+
+<div class="card">
+<img src="cert1.png">
+<p>Certificat Data</p>
+</div>
+
+<div class="card">
+<img src="cert2.png">
+<p>Certificat SQL</p>
+</div>
+
+<div class="card">
+<img src="cert3.png">
+<p>Certificat BI</p>
+</div>
+
+<div class="card">
+<img src="cert4.png">
+<p>Certificat Python</p>
+</div>
+
+<div class="card">
+<img src="cert5.png">
+<p>Certificat Analyse</p>
+</div>
+
+<div class="card">
+<img src="cert6.png">
+<p>Certificat Stat</p>
+</div>
+
+</div>
 </section>
 
 <script>
 function toggle(id) {
-  var element = document.getElementById(id);
-  element.classList.toggle('hidden');
+  document.getElementById(id).classList.toggle("hidden");
 }
 </script>
 
