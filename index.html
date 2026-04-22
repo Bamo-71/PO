@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +17,6 @@
       padding: 40px 20px;
       background: #1e293b;
     }
-    h1 { margin: 0; }
     h2 { color: #38bdf8; }
     section {
       padding: 30px;
@@ -30,7 +31,20 @@
       transition: 0.3s;
     }
     .card:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .skill-box {
+      text-align: center;
+      transition: 0.3s;
+    }
+    .skill-box:hover {
+      transform: translateY(-5px);
     }
     button {
       padding: 10px 15px;
@@ -40,59 +54,127 @@
       cursor: pointer;
       margin-top: 10px;
     }
-    .hidden {
-      display: none;
-    }
+    .hidden { display: none; }
+    img { border-radius: 5px; }
   </style>
 </head>
-<body><header>
+<body>
+
+<header>
   <h1>Bamory Sakanoko</h1>
   <p>Data Analyst | Étudiant en Statistique & Économie Appliquée</p>
-</header><section>
+</header>
+
+<section>
   <h2>À propos</h2>
   <div class="card">
     <p>
-      Étudiant en Licence 3 de Statistique et Économie Appliquée, spécialisé en analyse de données et économétrie.
+      Je suis SAKANOKO Bamory Data analyst junior. Étudiant en fin de cycle Licence en Statistique et Économie appliquée.
     </p>
   </div>
-</section><section>
-  <h2>Projets</h2>  <div class="card">
-    <h3>Modèle Mprobit - TravelMode</h3>
-    <p>Analyse des choix de transport.</p><button onclick="toggle('proj1')">Voir détails</button>
+</section>
 
-<div id="proj1" class="hidden">
-  <p>Modèle multinomial probit avec estimation des effets marginaux.</p>
-  <a href="#">Voir code R</a>
-</div>
-
-  </div>  <div class="card">
-    <h3>Modèle Logit / Probit</h3>
-    <p>Modélisation de variables qualitatives.</p><button onclick="toggle('proj2')">Voir détails</button>
-
-<div id="proj2" class="hidden">
-  <p>Estimation des probabilités et interprétation des coefficients.</p>
-  <a href="#">Voir code</a>
-</div>
-
-  </div></section><section>
+<section>
   <h2>Compétences</h2>
-  <div class="card">
-    <p>R | STATA | Excel | Économétrie</p>
+  <div class="card skills">
+
+```
+<div class="skill-box">
+  <img src="https://www.r-project.org/logo/Rlogo.png" width="50"><br>
+  <small>R</small>
+</div>
+
+<div class="skill-box">
+  <img src="stata.png" width="50"><br>
+  <small>STATA</small>
+</div>
+
+<div class="skill-box">
+  <img src="excel.png" width="50"><br>
+  <small>Excel</small>
+</div>
+
+<div class="skill-box">
+  <img src="sql.png" width="50"><br>
+  <small>SQL</small>
+</div>
+
+<div class="skill-box">
+  <img src="powerbi.png" width="50"><br>
+  <small>Power BI</small>
+</div>
+
+<div class="skill-box">
+  <img src="python.png" width="50"><br>
+  <small>Python</small>
+</div>
+
+<div class="skill-box">
+  <img src="pandas.png" width="50"><br>
+  <small>Pandas</small>
+</div>
+
+<div class="skill-box">
+  <img src="numpy.png" width="50"><br>
+  <small>Numpy</small>
+</div>
+
+<div class="skill-box">
+  <img src="matplotlib.png" width="50"><br>
+  <small>Matplotlib</small>
+</div>
+```
+
   </div>
-</section><section>
-  <h2>Contact</h2>
+</section>
+
+<section>
+  <h2>Projets</h2>
+
   <div class="card">
-    <p>Email : tonemail@email.com</p>
-    <p>Téléphone : +225 XX XX XX XX</p>
+    <h3>Modèle Mprobit - TravelMode</h3>
+    <button onclick="toggle('proj1')">Voir détails</button>
+    <div id="proj1" class="hidden">
+      <p>Analyse avec effets marginaux</p>
+      <a href="#">Voir code R</a>
+    </div>
   </div>
-</section><script>
+
+  <div class="card">
+    <h3>Modèle Logit / Probit</h3>
+    <button onclick="toggle('proj2')">Voir détails</button>
+    <div id="proj2" class="hidden">
+      <p>Analyse des probabilités</p>
+      <a href="#">Voir code</a>
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <h2>Certificats</h2>
+
+  <div class="card">
+    <button onclick="toggle('cert1')">Voir certificat</button>
+
+```
+<div id="cert1" class="hidden">
+  <p>Certificat Data Analysis</p>
+  <img src="certificat1.png" width="100%"><br>
+  <a href="#" target="_blank">Voir en ligne</a>
+</div>
+```
+
+  </div>
+
+</section>
+
+<script>
 function toggle(id) {
   var element = document.getElementById(id);
-  if (element.classList.contains('hidden')) {
-    element.classList.remove('hidden');
-  } else {
-    element.classList.add('hidden');
-  }
+  element.classList.toggle('hidden');
 }
-</script></body>
+</script>
+
+</body>
 </html>
